@@ -1,39 +1,40 @@
-html,body{
-    box-sizing: border-box;
+.html, body{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(240, 241, 241);
     color: rgb(106, 194, 223);
 }
+.App{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 button{
-    text-align: center;
-    background-color: none;
+    text-align:center;
+    background-color:none;
     color: rgb(7, 95, 146);
     border:2px solid rgb(7, 95, 146) ;
-    margin:10px 4px;
-    padding: 4px 4px;
-    font-size: 20px;
-    font-weight: bold;
+    margin:0px 0px;
+    padding:4px 4px;
+    font-size:20px;
+    font-weight:bold;
+    margin:20px 20px;
 }
 button:hover{
     background-color: rgb(7, 95, 146);
     color:white;
 }
 .letter{
-    position:relative;
-    font-size: 90px;
-    transition: 1s;
-    width:max-content;
-    margin: 2px 2px;
+    position:fixed;
+    transition:1s ease-out;
 }
 .letter-button{
-    font-size: 60px;
+    font-size:60px;
     background-color: rgb(106, 194, 223);
     border:none;
     color:white;
     cursor: pointer;
     width:60px;
+    height:70px;
 }
 .letter-button:hover{
     background-color: rgb(7, 95, 146);
@@ -41,30 +42,18 @@ button:hover{
 .letter-button:focus{
     outline:none;
 }
-.letters-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top:calc(50vh - 110px);
+.start-button{
+    position:fixed;
+    margin-top:100px;
 }
-.start-menu{
-    text-align: center;
-}
-.first{
-    position:relative;
-    display: inline-block;
-    left:40px;
-    margin: 2px 2px;
-    background-color: red;
-    width:50px;
-    height:50px;
-}
-.second{
-    position:relative;
-    display: inline-block;
-    left:20px;
-    margin: 2px 2px;
-    background-color: blue;
-    width:50px;
-    height:50px;
+@media screen and (max-width: 450px){
+    .letter-button{
+        font-size: 12px;
+        background-color: rgb(106, 194, 223);
+        border:none;
+        color:white;
+        cursor: pointer;
+        width:20px;
+        height:30px;
+    }
 }
