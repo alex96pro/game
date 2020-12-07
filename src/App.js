@@ -42,7 +42,7 @@ export default function App() {
         if(!over){
             setGameStarted(true);
             setSequence([]);
-            let newLetters = letters.filter((letter)=>letter);
+            let newLetters = letters.map((letter) => ({...letter}));
             let screenWidth = window.screen.width;
             let screenHeight = window.screen.height;
             let newX = [], newY = [];
@@ -63,6 +63,8 @@ export default function App() {
                 newLetters[i].moveX = newX[i];
                 newLetters[i].moveY = newY[i];
             }
+            console.log(letters);
+            console.log(newLetters);
             setLetters(newLetters);
             enableButtons();
             let newHandle = setInterval(autoplay, device.seconds * 1000);
@@ -74,7 +76,7 @@ export default function App() {
     const autoplay = () => {
         setGameStarted(true);
         setSequence([]);
-        let newLetters = letters.filter((letter)=>letter);
+        let newLetters = letters.map((letter)=>({...letter}));
         let screenWidth = window.screen.width;
         let screenHeight = window.screen.height;
         let newX = [], newY = [];
@@ -118,7 +120,7 @@ export default function App() {
                         alert("Bravo!");
                         setGameStarted(false);
                         startGame(true);
-                        let newArray = letters.filter((letter) => letter);
+                        let newArray = letters.map((letter) => ({...letter}));
                         newArray.forEach((item,index)=>{item.moveY = 0; item.moveX = index*device.letterWidth});
                         setLetters(newArray);
                         enableButtons();

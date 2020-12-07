@@ -46,7 +46,7 @@ button:hover{
     position:fixed;
     margin-top:100px;
 }
-@media screen and (max-width: 450px){
+@media (max-width: 760px){
     .letter-button{
         font-size: 12px;
         background-color: rgb(106, 194, 223);
