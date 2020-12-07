@@ -63,8 +63,6 @@ export default function App() {
                 newLetters[i].moveX = newX[i];
                 newLetters[i].moveY = newY[i];
             }
-            console.log(letters);
-            console.log(newLetters);
             setLetters(newLetters);
             enableButtons();
             let newHandle = setInterval(autoplay, device.seconds * 1000);
